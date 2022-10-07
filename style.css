@@ -1,0 +1,127 @@
+
+@keyframes cross{
+  from{width: 0px;}
+  to{width: 300px;}
+}
+
+@media screen and (max-width: 600px){
+  .container{
+    display: block;
+  }
+  .infomain{
+    margin-left: 65px;
+    padding-top: 35px;
+  }
+}
+
+@media screen and (min-width: 599px){
+  .container{
+    display: flex;
+  }
+}
+
+
+*{
+font-family: Comic Sans MS;
+}
+
+body {
+  background-color: rgb(23, 23, 23);
+  color: white;
+}
+
+.container{
+  justify-content: center;
+}
+
+.boxText {
+  font-size: 80px;
+}
+
+.main {
+  display: grid;
+  position: relative;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+  text-align: center;
+  justify-content: center;
+}
+
+.grid {
+  border: 3px solid rgb(254, 254, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.grid:hover{
+  background-color: rgb(35, 35, 35);
+}
+
+.bl{
+  border-left: none;
+}
+.bt{
+  border-top: none;
+}
+.br{
+  border-right: none;
+}
+.bb{
+  border-bottom: none;
+}
+
+.infomain{
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  padding-left: 100px;
+}
+
+.info{
+  font-size: 5vw
+}
+
+.winner{
+  color: lime;
+}
+
+.reset{
+  background-color: rgb(254, 254, 254);
+  width: 100px;
+  height: 33px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cross{
+  display: none;
+  animation-name: cross;
+  animation-duration: 1s;
+  background-color: yellow;
+  position: absolute;
+  width: 300px;
+  height: 10px;
+  /* margin-left: 5px; */
+  margin-top: 147px;
+  border-radius: 5px;
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+.arrow{
+  width: 20px;
+  height: 20px;
+  border: 5px solid white;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(135deg);
+}
+
+.trump{
+  width: 0;
+  height: 0;
+  transition: ease-in-out 1s;
+  margin-top: 3vw;
+}
