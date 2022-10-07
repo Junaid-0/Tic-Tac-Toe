@@ -22,16 +22,19 @@
 
 
 *{
-font-family: Comic Sans MS;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  font-family: Comic Sans MS;
   background-color: rgb(23, 23, 23);
   color: white;
 }
 
 .container{
   justify-content: center;
+  padding-top: 10px;
 }
 
 .boxText {
@@ -124,4 +127,83 @@ body {
   height: 0;
   transition: ease-in-out 1s;
   margin-top: 3vw;
+}
+
+
+
+
+
+/*
+  Navigation Bar
+*/
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.navi{
+  background-color: rgb(58, 193, 255);;
+  margin-top: 3px;
+}
+
+.menul{
+  display: flex;
+  justify-content: center;
+}
+
+.menu{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  list-style: none;
+  padding: 1vw;
+  font-size: 1.3vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.menu:hover{
+  background-color: rgb(44, 187, 44);
+}
+
+.linkul li{
+  display: block;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  
+}
+
+.submenu{
+  position: absolute;
+  display: block;
+  margin-top: 15px;
+  /* border: 3px solid black; */
+}
+.submenu li{
+  display: none;
+  height: 0px;
+  /* border: 3px solid black; */
+}
+
+.menu:hover .submenu li{
+  display: flex;
+  animation-name: dropdown;
+  animation-duration: 0.5s;
+  padding: 10px 27.5px 10px 27.5px ;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  margin-left: -30px;
+}
+
+.menu .submenu li:hover{
+  background-color: rgb(254, 214, 255);
+}
+
+.linkul{
+  list-style: none;
+  display: flex;
 }
